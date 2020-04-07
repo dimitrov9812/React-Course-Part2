@@ -228,7 +228,7 @@ const demoState = {
 
 
 /*
-=== Spreading objects practice
+=== Spreading objects practice  
 
 const user = {
     name: 'JEn',
