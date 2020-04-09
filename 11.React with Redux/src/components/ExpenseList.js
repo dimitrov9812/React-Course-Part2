@@ -3,10 +3,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseListItem from './ExpensesListItem';
 import selectExpenses from '../selectors/expenses';
+import ExpenseListFilters from './ExpenseListFilters';
 
 // Regular component -> not connected
 const ExpenseList = (props) => (
     <div>
+        <ExpenseListFilters />
        <h1>Expense List</h1> 
        {props.expenses.map((expense) => {
            return <ExpenseListItem key = {expense.id} {...expense} />
