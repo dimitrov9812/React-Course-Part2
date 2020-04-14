@@ -11,19 +11,16 @@ import getVisibleExpenses from './selectors/expenses'
 
 
 const store = configureStore();
-
+console.log("Hello");
 
 // =========Challenge=========
 // addExpense -> Water bill 
 const expenseOne = store.dispatch(addExpense({ decsription:'Water Bill', amount: 130}));
 // addExpense -> Gas bill
-const expenseTwo = store.dispatch(addExpense({ decsription:'Gas Bill', amount: 120}));
+const expenseTwo = store.dispatch(addExpense({ decsription:'Gas Bill', amount: 120, createdAt: 1000}));
+const expenseThree = store.dispatch(addExpense({ decsription:'Rent', amount: 55230}));
 // setTextFilter -> bill (should see 2 items) water(should see 1 item)
-store.dispatch(setTextFilter('Water'));
 
-setTimeout(() => {
-  store.dispatch(setTextFilter('Gas'));
-}, 3000);
 // getVisibleExpenses -> print visible to the screen
 const storeState = store.getState();
 const visibleExpenses = getVisibleExpenses(storeState.expenses, storeState.filters);
