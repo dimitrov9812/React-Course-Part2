@@ -1,4 +1,16 @@
 import React from 'react';
+// We will use Moment.js for managing time
+import moment from 'moment';
+// Also we will use airbnb react-dates
+import { SingleDatePicker } from 'react-dates';
+import 'react-dates/lib/css/_datepicker.css';
+
+import DatePicker from "react-datepicker";
+ 
+import "react-datepicker/dist/react-datepicker.css";
+
+const now = moment();
+console.log(now.format("MMM Do YYYY"));  
 
 // =======Challenge======
 // 1. Setup note state
@@ -8,7 +20,9 @@ export default class ExpenseForm extends React.Component {
     state = {
         description: '',
         note: '',
-        amount: ''
+        amount: '',
+        createdAt: new Date(),
+        calendarFocused: false
     }
     onDescriptionChange = (e) => {
         const description = e.target.value;
@@ -24,7 +38,18 @@ export default class ExpenseForm extends React.Component {
             this.setState(() => ({ amount}));
         }
     }
-    render(){
+    onDateChange = (date) => {
+        this.setState({
+          createdAt: date
+        });
+        console.log(date);
+      };
+
+    
+    onFocusChange = ({ focused }) => {
+        this.setState(() => ({ calendarFocused: focused }));
+    };
+    render() {
         return(
             <div>
                 <form>
@@ -40,6 +65,10 @@ export default class ExpenseForm extends React.Component {
                         placeholder="Amount"
                         value = {this.state.amount}
                         onChange = {this.onAmountChange}
+                     />
+                     <DatePicker
+                        selected={this.state.createdAt}
+                        onChange={this.onDateChange}
                      />
                      <textarea
                         placeholder="Add a form for your expense."
