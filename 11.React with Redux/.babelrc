@@ -3,6 +3,9 @@
         "env",
         "react"
     ],
+    "test": [
+        "jest"
+    ],
     "plugins": [
         "transform-class-properties",
         //object spread operator
