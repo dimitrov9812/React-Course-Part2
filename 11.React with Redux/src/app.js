@@ -1,40 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import AppRouter from './routers/AppRouter'
+import AppRouter from './routers/AppRouter';
+import configureStore from './store/configureStore';
+import { addExpense } from './actions/expenses';
+import { setTextFilter } from './actions/filters';
+import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
-import configureStore from './store/configureStore';
-import { addExpense } from '../src/actions/expenses';
-import { setTextFilter } from '../src/actions/filters'
-import getVisibleExpenses from './selectors/expenses'
-
 
 const store = configureStore();
-console.log("Hello");
 
-// =========Challenge=========
-// addExpense -> Water bill 
-const expenseOne = store.dispatch(addExpense({ decsription:'Water Bill', amount: 130}));
-// addExpense -> Gas bill
-const expenseTwo = store.dispatch(addExpense({ decsription:'Gas Bill', amount: 120, createdAt: 1000}));
-const expenseThree = store.dispatch(addExpense({ decsription:'Rent', amount: 55230}));
-// setTextFilter -> bill (should see 2 items) water(should see 1 item)
+store.dispatch(addExpense({ description: 'Water bill', amount: 4500 }));
+store.dispatch(addExpense({ description: 'Gas bill', createdAt: 1000 }));
+store.dispatch(addExpense({ description: 'Rent', amount: 109500 }));
 
-// getVisibleExpenses -> print visible to the screen
-const storeState = store.getState();
-const visibleExpenses = getVisibleExpenses(storeState.expenses, storeState.filters);
-//print the visible expenses on the console
+const state = store.getState();
+const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 console.log(visibleExpenses);
-//we use the 'Switch' to make the 404 page available.
 
-// Provider is used to pass the store to a react component
-// We have to specifty a variable name for the store and then pass the store
-// In our case we named the variable 'store' and passed it '{store}'.
 const jsx = (
   <Provider store={store}>
-    <AppRouter/>
+    <AppRouter />
   </Provider>
 );
-  const componentDiv = $("#app")[0];
-  ReactDOM.render(jsx,componentDiv);
+
+ReactDOM.render(jsx, document.getElementById('app'));
