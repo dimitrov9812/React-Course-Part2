@@ -18,7 +18,7 @@ export default [{
     id:'3',
     description: 'Red',
     note: '',
-    amount: 1253,
+    amount: 1000,
     createdAt: moment(0).add(4, 'days').valueOf()
 }
 ];
