@@ -4,14 +4,14 @@ import toJSON from 'enzyme-to-json';
 import { AddExpensePage }  from '../../components/AddExpensePage';
 import expenses from '../fixtures/expenses'
 
-let addExpense, history, wrapper;
+let startAddExpense, history, wrapper;
 
 // run code before each test
 beforeEach(() => {
-    addExpense = jest.fn();
+    startAddExpense = jest.fn();
     // this means history.push will be used as a spy function
     history = { push: jest.fn() }
-    wrapper = shallow(<AddExpensePage addExpense={addExpense} history={history}/>);
+    wrapper = shallow(<AddExpensePage startAddExpense={startAddExpense} history={history}/>);
 });
 
 test("Should render AddExpensePage Correctly", () =>{
@@ -20,5 +20,5 @@ test("Should render AddExpensePage Correctly", () =>{
 test("Should handle onSubmit", () =>{
     wrapper.find('ExpenseForm').prop('onSubmit')(expenses[1]);
     expect(history.push).toHaveBeenLastCalledWith('/');
-    expect(addExpense).toHaveBeenLastCalledWith(expenses[1])
-});
+    expect(startAddExpense).toHaveBeenLastCalledWith(expenses[1])
+}); 
