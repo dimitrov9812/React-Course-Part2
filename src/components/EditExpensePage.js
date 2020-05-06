@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
-import { editExpense, removeExpense } from '../actions/expenses';
+import { editExpense, removeExpense, startRemoveExpense } from '../actions/expenses';
 
 // =============Challenge============
 // 1. Refactor EditExpensePage to be a class based component
@@ -13,7 +13,7 @@ export class EditExpensePage extends React.Component{
     this.props.history.push('/');
   }
   onRemove= () => {
-    this.props.removeExpense({ id: this.props.expense.id });
+    this.props.startRemoveExpense({ id: this.props.expense.id });
     this.props.history.push('/');
   }
   render(){
@@ -38,7 +38,7 @@ const mapStateToProps = (state, props) => {
 const mapDispatchToProps = (dispatch, props) => {
   return {
     editExpense: (id,expense) => dispatch(editExpense(props.expense.id, props.expense)),
-    removeExpense: (data) => dispatch(removeExpense(data))
+    startRemoveExpense: (data) => dispatch(startRemoveExpense(data))
   };
 };
 
