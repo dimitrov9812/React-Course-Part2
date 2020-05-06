@@ -11,6 +11,7 @@ import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import './firebase/firebase';
 import { firebase } from './firebase/firebase';
+import { database } from 'firebase';
 
 
 const store = configureStore();
@@ -28,9 +29,9 @@ const renderApp = () => {
     hasRendered = true;
   }
 };
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
-
- 
+ReactDOM.render(<div>
+  Loading...
+  </div>, document.getElementById('app'));
 
 // confirm im someone is logged in or logged out
 firebase.auth().onAuthStateChanged((user) => {

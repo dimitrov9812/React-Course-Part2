@@ -14,7 +14,9 @@ export const PrivateRoute = ({ isAuthenticated, component: Component, ...rest}) 
             </div>
         ):
         (
+            <div>   
             <Redirect to="/"/>
+            </div>
         )
     )}
      />
