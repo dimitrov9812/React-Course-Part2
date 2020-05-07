@@ -7,36 +7,51 @@
     align-items: center;
     justify-content: center;
 }
-.wrap{
-    height: 60%;
-    width: 20%;
-}
 .login-div{
     background-color: $form-background;
     border-radius: 5%;
-    height: 50%;
-    width: 90%;
+    width: 20%;
     box-shadow: 10px 10px 1px 0px rgba(104,169,155,1);
     -webkit-box-shadow:10px 10px 1px 0px rgba(104,169,155,1);
     -moz-box-shadow:10px 10px 1px 0px rgba(104,169,155,1);
+    @media(max-width: $desktop-breakpoint){
+        width: 80%;
+    }
+    margin-bottom: 5%;
+}
+.login-form{
+    margin: 0 auto;
+    height: 80%;
+    
 }
 .input{
-    width: 100%;
     margin: 0 auto;
-    margin-left: 7%;
-    margin-top: 5%;
+    margin-left: 15%;
+    margin-bottom: 1%;
+    @media(max-width: $desktop-breakpoint){
+        margin-left: 7.5%;
+     }
+   
 }
 .user-guide{
     margin-bottom: 2%;
 }
 .login-input{
+    margin: 0 auto;
+    padding: 2%;
     width: 80%;
-    height:2.5vh;
     border: none; 
     border:solid 1px #ccc;
     border-top-left-radius:10px;
     border-top-right-radius:10px;
-    padding: 2%;
+    height:3vh;
+    @media(max-width: $desktop-breakpoint){
+        width:90%;
+     }
+    
+}
+.pass-input{
+    margin-bottom: 5%;
 }
 .login-text-div{
     width:100%;
@@ -47,17 +62,17 @@
 .login-text{
     color:$orange;
     font-size: $l-size;
-    width:30%;
     margin: 0 auto;
+    width:30%;
     margin-left: 40%;
-    padding-top: 3%;
+    margin-top: 5%;
 }
 .login-button{
     width: 30%;
     margin: 0 auto;
     height: 13%;
-    margin-top: 7%;
     margin-left: 35%;
+    margin-bottom: 10%;
     border: none;
     background-color: $orange;
     border-radius: 10px;
@@ -75,22 +90,23 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    font-size: $m-size;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
 }
 .item{
-    width:80%;
     margin: 0 auto;
-    margin-left: 17%;
-    margin-top: 8%;
+    margin-bottom: 2%;
 }
 #signUp-item{
     color:$orange;
-    width:80%;
     margin: 0 auto;
-    margin-top: 3%;
-    margin-left: 37%;
 }
 #signUp-item:hover{
     color:rgb(248, 167, 96);
     cursor: pointer;
+}
+
+.final{
+    text-align: center;
 }

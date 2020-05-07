@@ -40,13 +40,13 @@
 }
 
 .expense-tag{
-    width: 80%;
+    width: 72%;
     @media(max-width: $desktop-breakpoint){
         width: 100%;
     }
 }
 .date-tag{
-    width: 10%;
+    width: 14%;
     float: right;
     @media(max-width: $desktop-breakpoint){
         width: 100%;
@@ -54,7 +54,7 @@
     }
 }
 .amount-tag{
-    width: 10%;
+    width: 14%;
     float: right;
     @media(max-width: $desktop-breakpoint){
         width: 100%;
