@@ -1,0 +1,39 @@
+.input-group{
+    display:flex;
+    margin-bottom: $l-size;
+}
+
+.input-group-item{
+    width: 30%;
+}
+
+.input-filters-select{
+    width: 101%;
+    height: 5.6vh;
+    border: none;
+    border: 2px solid $header-color;
+    background-color: $form-background;
+}
+
+.input-filters-search{
+    width: 97%;
+    height: 5vh;
+    border: none;
+    border: 2px solid $header-color;
+    background-color: $form-background;
+    border-top-left-radius: 10px;
+    padding-left: 3%;
+}
+
+.DateRangePickerInput{
+    width: 99%;
+    height: 5.2vh;
+    border: none;
+    border: 2px solid $header-color;
+    background-color: $form-background;
+    border-top-right-radius: 10px;
+}
+
+.DateInput{
+    background-color: $form-background;
+}
