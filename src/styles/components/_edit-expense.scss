@@ -1,0 +1,24 @@
+.input-group-edit{
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.remove-button{
+    border: 2px solid rgb(233, 32, 32);
+    border-radius: 10px;
+    align-items: center;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    width: 10%;
+    padding: 1%;
+    height: 4.4vh;
+    font-size: $m-size;
+    color: rgb(233, 32, 32);
+}
+
+.remove-button-div{
+    margin: 0 auto;
+    margin-top: -3.5%;
+    margin-left: 60.6%;
+}

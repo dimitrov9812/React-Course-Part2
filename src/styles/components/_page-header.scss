@@ -1,7 +1,7 @@
 .page-header{
-    background-color: $form-background;
     margin-bottom: $l-size;
     padding: $l-size 0;
+    margin-top: 2%;
 }
 .page-header-actions{
     margin-top: $m-size;
@@ -13,6 +13,7 @@
     font-weight: 300;
     margin:0;
     span{
+        color:black;
         font-weight: 700;
     }
 }
@@ -25,6 +26,7 @@
 }
 
 .add-expense-button{
+    margin:0;
     border: 2px solid $orange;
     border-radius: 10px;
     padding: 3%;
@@ -33,11 +35,21 @@
     text-align: center;
     justify-content: center;
     width: 100%;
-    height: 3vh;
+    height: 4vh;
     font-size: $m-size;
     color: $orange;
-    
+    margin: -5%;
+    transition: color .3s ease;
+    &:hover{
+        color: rgba(251, 185, 62, 0.671);
+        border-color: rgba(251, 185, 62, 0.671);
+    }
 }
 .add-expense-link{
     text-decoration: none;
+}
+
+.add-expense-heading{
+    margin: 0;
+    font-size: $l-size;
 }

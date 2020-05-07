@@ -1,0 +1,62 @@
+.list-header{
+    background-color: $green;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: $form-background;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-item{
+    padding-left: 1%;
+    padding-right: 1%;
+    display:flex;
+    color:rgb(117, 117, 117);
+    flex-direction: column;
+    border-bottom: 1px solid $form-background;
+    text-decoration: none;
+    transition: background .3s ease;
+    &:hover{
+        background-color: #a0fbce83;
+    }
+
+    @media(min-width: $desktop-breakpoint){
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.expense-list{
+    padding: 1%;
+    border: 2px solid $green;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: $form-background;
+}
+
+.expense-tag, .date-tag, .amount-tag{
+    word-break: break-all;
+}
+
+.expense-tag{
+    width: 80%;
+    @media(max-width: $desktop-breakpoint){
+        width: 100%;
+    }
+}
+.date-tag{
+    width: 10%;
+    float: right;
+    @media(max-width: $desktop-breakpoint){
+        width: 100%;
+        font-size: $s-size;
+    }
+}
+.amount-tag{
+    width: 10%;
+    float: right;
+    @media(max-width: $desktop-breakpoint){
+        width: 100%;
+    }
+}

@@ -1,0 +1,52 @@
+.input-group-add{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 1%;
+    background-color: $form-background;
+    border-radius: 10px;
+    height: 45vh;
+}
+.input-add-search,.input-add-button,.input-add-note,.input-add-button,.SingleDatePickerInput,.input-add-amount{
+    margin-bottom: 2%;
+    border: none;
+    background-color: $form-background;
+    border: 2px solid $header-color ;
+}
+.input-add-search,.input-add-button,.input-add-amount{
+    height: 10%;
+}
+
+.input-add-note{
+    height: 30%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.input-add-search{
+    margin-top: 2%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.error{
+    color:red;
+}
+.input-add-button{
+    border: 2px solid $orange;
+    border-radius: 10px;
+    align-items: center;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    width: 20%;
+    font-size: $m-size;
+    color: $orange;
+    
+}
+.add-expense-link{
+    text-decoration: none;
+}

@@ -1,37 +1,67 @@
 .input-group{
     display:flex;
     margin-bottom: $l-size;
+    flex-direction: column;
+    margin-bottom: $m-size;
+    @media (min-width: $desktop-breakpoint) {
+        flex-direction: row;
+    }
 }
 
 .input-group-item{
-    width: 30%;
+    width: 95%;
+    margin-bottom: 2%;
+    @media (min-width: $desktop-breakpoint) {
+        width: 26%;
+    }
 }
 
-.input-filters-select{
-    width: 101%;
-    height: 5.6vh;
+.input-filters-select{ 
+    width: 103%;
+    height: 100%;
     border: none;
     border: 2px solid $header-color;
     background-color: $form-background;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 10px;
+    @media (min-width: $desktop-breakpoint) {
+        width: 101%;
+        height: 100%;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
 }
 
 .input-filters-search{
-    width: 97%;
-    height: 5vh;
+    width: 99%;
+    height: 88%;
     border: none;
     border: 2px solid $header-color;
     background-color: $form-background;
-    border-top-left-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 10px;
     padding-left: 3%;
-}
+    @media (min-width: $desktop-breakpoint) {
+        width: 95.2%;
+        height: 90%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0px;
+    }
+} 
 
 .DateRangePickerInput{
-    width: 99%;
-    height: 5.2vh;
+    width: 102%;
+    height: 20%;
     border: none;
     border: 2px solid $header-color;
     background-color: $form-background;
     border-top-right-radius: 10px;
+    @media (min-width: $desktop-breakpoint) {
+        width: 183%;
+        height: 10%;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 10px;
+    }
 }
 
 .DateInput{

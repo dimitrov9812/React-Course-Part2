@@ -6,7 +6,7 @@ import { startLogout } from '../actions/auth';
 // we can also use props down here in the ()
 const Header = (props) => (
   <header className="header">
-    <div className="content-container">
+    <div className="content-container-second">
       <div className="header-content">
         <Link className ="header-title" to="/dashboard" exact={true}><h1>Budget Manager</h1></Link>
         <h1 className="logout-button" onClick = {props.startLogout}>

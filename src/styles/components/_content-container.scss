@@ -1,5 +1,17 @@
 .content-container{
     margin: 0 auto;
     padding: 0 $m-size;
-    max-width: 160rem;
+    max-width: 140rem;
+}
+
+.content-container-second{
+    margin: 0 auto;
+    padding: 0 $m-size;
+    max-width: 90rem;
+}
+
+.home-mini-wrap{
+    background-color: $form-background;
+    padding-bottom: 3%;
+    border-radius: 10px;
 }

@@ -4,7 +4,7 @@ import ExpenseListFilters from './ExpenseListFilters';
 import ExpensesSummary from './ExpensesSummary';
 
 const ExpenseDashboardPage = () => (
-  <div>
+  <div className ="content-container-second home-mini-wrap">
     <ExpensesSummary />
     <ExpenseListFilters />
     <ExpenseList />

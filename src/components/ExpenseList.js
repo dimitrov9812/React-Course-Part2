@@ -5,17 +5,32 @@ import selectExpenses from '../selectors/expenses';
 
 // exporting the unconnected version
 export const ExpenseList = (props) => (
-  <div>
-  {
-    props.expenses.length === 0 ? (
-      <p>No Expenses</p>
-    ) : (
-      props.expenses.map((expense) => {
-        return <ExpenseListItem key={expense.id} {...expense} />;
-      })
-    )
-  }
-  
+  <div className="content-container">
+    <div className="list-header">
+      <div className="show-for-mobile">
+        Expenses
+      </div>
+      <div className="show-for-desktop expense-tag">
+        Expense
+      </div>
+      <div className="show-for-desktop date-tag">
+        Date
+      </div>
+      <div className="show-for-desktop amount-tag">
+        Amount
+      </div>
+    </div>
+    <div className="expense-list">
+      {
+      props.expenses.length === 0 ? (
+        <p>No Expenses</p>
+      ) : (
+        props.expenses.map((expense) => {
+          return <ExpenseListItem key={expense.id} {...expense} />;
+        })
+      )
+     }
+    </div>
   </div>
 );
 
