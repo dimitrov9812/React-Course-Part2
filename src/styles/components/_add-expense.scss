@@ -8,12 +8,32 @@
     background-color: $form-background;
     border-radius: 10px;
     height: 45vh;
+    @media (max-width: $desktop-breakpoint) {
+        display: block;
+        width: 80%;
+    }
 }
-.input-add-search,.input-add-button,.input-add-note,.input-add-button,.SingleDatePickerInput,.input-add-amount{
+.input-add-search,.input-add-button,.input-add-note,.input-add-button,.input-add-amount{
     margin-bottom: 2%;
     border: none;
     background-color: $form-background;
     border: 2px solid $header-color ;
+    @media (max-width: $desktop-breakpoint) {
+        width: 97%;
+        margin: 0 auto;
+        margin-bottom: 2%;
+    }
+}
+.SingleDatePickerInput{
+    margin-bottom: 2%;
+    border: none;
+    background-color: $form-background;
+    border: 2px solid $header-color ;
+    @media (max-width: $desktop-breakpoint) {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 4%;
+    }
 }
 .input-add-search,.input-add-button,.input-add-amount{
     height: 10%;
@@ -23,6 +43,7 @@
     height: 30%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+   
 }
 
 
@@ -45,6 +66,11 @@
     width: 20%;
     font-size: $m-size;
     color: $orange;
+    @media (max-width: $desktop-breakpoint) {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
     
 }
 .add-expense-link{

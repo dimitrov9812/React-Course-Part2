@@ -6,9 +6,7 @@ export const LoginPage = ({ startLogin }) => (
     <div>
         <div className="box-layout">
                 <div className="login-div">
-                    <div clasName="login-text-div">
-                        <p className="login-text">Login</p>
-                    </div>
+                        <div className="login-text">Login</div>
                     <div className="login-form">
                         <div className="input">
                             <p className="user-guide">Username</p>

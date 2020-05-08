@@ -17,6 +17,11 @@
         color:black;
         font-weight: 700;
     }
+    @media (max-width: $desktop-breakpoint) {
+        display: block;
+        font-size: 3.5vh;
+        margin-bottom: 6%;
+    }
 }
 .page-header-content{
     align-items: center;
@@ -24,6 +29,12 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     padding: $s-size 0;
+    @media (max-width: $desktop-breakpoint) {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
 }
 
 .add-expense-button{

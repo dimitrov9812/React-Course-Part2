@@ -15,10 +15,20 @@
     height: 4.4vh;
     font-size: $m-size;
     color: rgb(233, 32, 32);
+    display: flex;
+    @media (max-width: $desktop-breakpoint) {
+        
+    }
 }
 
 .remove-button-div{
     margin: 0 auto;
     margin-top: -3.5%;
     margin-left: 60.6%;
+    @media (max-width: $desktop-breakpoint) {
+        width: 585%;
+        height: 20%;
+        margin-top: 5%;
+        margin-left: 20.6%;
+    }
 }
