@@ -6,6 +6,7 @@ import configureStore from './store/configureStore';
 import { startSetExpenses } from './actions/expenses';
 import { login, logout } from './actions/auth';
 import getVisibleExpenses from './selectors/expenses';
+import { Loader }  from './components/Loader';
 import 'react-dates/lib/css/_datepicker.css';
 import './styles/styles.scss';
 import 'normalize.css/normalize.css';
@@ -30,9 +31,7 @@ const renderApp = () => {
     hasRendered = true;
   }
 };
-ReactDOM.render(<div>
-  Loading...
-  </div>, document.getElementById('app'));
+ReactDOM.render(<Loader/>,document.getElementById('app'));
 
 // confirm im someone is logged in or logged out
 firebase.auth().onAuthStateChanged((user) => {
